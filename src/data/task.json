@@ -1,0 +1,94 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Design Homepage",
+      "description": "Create the homepage UI with responsive layout.",
+      "status": "Completed",
+      "priority": "High",
+      "assignedTo": "Alice Johnson",
+      "dueDate": "2026-07-20"
+    },
+    {
+      "id": 2,
+      "title": "Implement Authentication",
+      "description": "Add JWT login and registration functionality.",
+      "status": "In Progress",
+      "priority": "High",
+      "assignedTo": "Bob Smith",
+      "dueDate": "2026-07-22"
+    },
+    {
+      "id": 3,
+      "title": "Setup MongoDB Database",
+      "description": "Create collections and connect the backend.",
+      "status": "Pending",
+      "priority": "Medium",
+      "assignedTo": "Charlie Brown",
+      "dueDate": "2026-07-25"
+    },
+    {
+      "id": 4,
+      "title": "Create Product API",
+      "description": "Build REST API endpoints for products.",
+      "status": "Completed",
+      "priority": "High",
+      "assignedTo": "David Wilson",
+      "dueDate": "2026-07-18"
+    },
+    {
+      "id": 5,
+      "title": "Implement Shopping Cart",
+      "description": "Allow users to add, remove, and update cart items.",
+      "status": "In Progress",
+      "priority": "High",
+      "assignedTo": "Emma Davis",
+      "dueDate": "2026-07-28"
+    },
+    {
+      "id": 6,
+      "title": "Add Dark Mode",
+      "description": "Implement theme switching using Context API.",
+      "status": "Pending",
+      "priority": "Low",
+      "assignedTo": "Frank Miller",
+      "dueDate": "2026-08-02"
+    },
+    {
+      "id": 7,
+      "title": "Optimize Images",
+      "description": "Compress and lazy-load images for better performance.",
+      "status": "Completed",
+      "priority": "Medium",
+      "assignedTo": "Grace Lee",
+      "dueDate": "2026-07-15"
+    },
+    {
+      "id": 8,
+      "title": "Payment Integration",
+      "description": "Integrate Stripe payment gateway.",
+      "status": "Pending",
+      "priority": "High",
+      "assignedTo": "Henry Walker",
+      "dueDate": "2026-08-05"
+    },
+    {
+      "id": 9,
+      "title": "User Dashboard",
+      "description": "Create dashboard with analytics cards.",
+      "status": "In Progress",
+      "priority": "Medium",
+      "assignedTo": "Isabella Moore",
+      "dueDate": "2026-07-30"
+    },
+    {
+      "id": 10,
+      "title": "Deploy to Vercel",
+      "description": "Deploy frontend and configure environment variables.",
+      "status": "Pending",
+      "priority": "Medium",
+      "assignedTo": "Jack Anderson",
+      "dueDate": "2026-08-08"
+    }
+  ]
+}
