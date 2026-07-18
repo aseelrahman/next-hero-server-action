@@ -1,9 +1,18 @@
 "use client";
 
 import { CirclePlus } from "@gravity-ui/icons";
-import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+import {
+  Button,
+  Input,
+  Label,
+  ListBox,
+  Modal,
+  Surface,
+  TextField,
+  Select,
+} from "@heroui/react";
 
-export function AddTask() {
+export function AddTask({ createATask }) {
   return (
     <Modal>
       <Button variant="secondary">Open Contact Form</Button>
@@ -16,63 +25,91 @@ export function AddTask() {
                 <CirclePlus className="size-5" />
               </Modal.Icon>
               <Modal.Heading>Add task</Modal.Heading>
-              
             </Modal.Header>
             <Modal.Body className="p-6">
               <Surface variant="default">
-                <form className="flex flex-col gap-4">
+                <form action={createATask} className="flex flex-col gap-4">
                   <TextField
                     className="w-full"
                     name="name"
                     type="text"
                     variant="secondary"
                   >
-                    <Label>Name</Label>
-                    <Input placeholder="Enter your name" />
+                    <Label>Title</Label>
+                    <Input placeholder="Enter your Task Title" />
                   </TextField>
                   <TextField
                     className="w-full"
-                    name="email"
-                    type="email"
+                    name="description"
+                    type="text"
                     variant="secondary"
                   >
-                    <Label>Email</Label>
-                    <Input placeholder="Enter your email" />
+                    <Label>Task Description</Label>
+                    <Input placeholder="Enter your Task Description" />
                   </TextField>
+                  <Select name="priority" className="" placeholder="Select one">
+                    <Label>Priority</Label>
+                    <Select.Trigger>
+                      <Select.Value />
+                      <Select.Indicator />
+                    </Select.Trigger>
+                    <Select.Popover>
+                      <ListBox>
+                        <ListBox.Item id="low" textValue="Low">
+                          Low
+                          <ListBox.ItemIndicator />
+                        </ListBox.Item>
+                        <ListBox.Item id="medium" textValue="Medium">
+                          Medium
+                          <ListBox.ItemIndicator />
+                        </ListBox.Item>
+                        <ListBox.Item id="high" textValue="High">
+                          High
+                          <ListBox.ItemIndicator />
+                        </ListBox.Item>
+                      </ListBox>
+                    </Select.Popover>
+                  </Select>
+
+                  <Select name="status" className="" placeholder="Select one">
+                    <Label>Status</Label>
+                    <Select.Trigger>
+                      <Select.Value />
+                      <Select.Indicator />
+                    </Select.Trigger>
+                    <Select.Popover>
+                      <ListBox>
+                        <ListBox.Item id="pending" textValue="Pending">
+                          Pending
+                          <ListBox.ItemIndicator />
+                        </ListBox.Item>
+                        <ListBox.Item id="Progress" textValue="Progress">
+                          Progress
+                          <ListBox.ItemIndicator />
+                        </ListBox.Item>
+                        <ListBox.Item id="completed" textValue="Completed">
+                          Completed
+                          <ListBox.ItemIndicator />
+                        </ListBox.Item>
+                      </ListBox>
+                    </Select.Popover>
+                  </Select>
+
                   <TextField
                     className="w-full"
-                    name="phone"
-                    type="tel"
+                    name="assignedTo"
                     variant="secondary"
                   >
-                    <Label>Phone</Label>
-                    <Input placeholder="Enter your phone number" />
+                    <Label>Assigned To</Label>
+                    <Input placeholder="Task Assigned To" />
                   </TextField>
-                  <TextField
-                    className="w-full"
-                    name="company"
-                    variant="secondary"
-                  >
-                    <Label>Company</Label>
-                    <Input placeholder="Enter your company name" />
-                  </TextField>
-                  <TextField
-                    className="w-full"
-                    name="message"
-                    variant="secondary"
-                  >
-                    <Label>Message</Label>
-                    <Input placeholder="Enter your message" />
-                  </TextField>
+                  <Modal.Footer>
+                    <Button variant="secondary">Cancel</Button>
+                    <Button type="submit">Submit Task</Button>
+                  </Modal.Footer>
                 </form>
               </Surface>
             </Modal.Body>
-            <Modal.Footer>
-              <Button slot="close" variant="secondary">
-                Cancel
-              </Button>
-              <Button slot="close">Send Message</Button>
-            </Modal.Footer>
           </Modal.Dialog>
         </Modal.Container>
       </Modal.Backdrop>
